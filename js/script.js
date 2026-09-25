@@ -1,3 +1,34 @@
+const preloader = document.getElementById('preloader');
+
+if (preloader) {
+  const MIN_DISPLAY_MS = 1000;
+  const startTime = performance.now();
+  let hidden = false;
+
+  const hidePreloader = () => {
+    if (hidden) return;
+    const elapsed = performance.now() - startTime;
+    const remaining = MIN_DISPLAY_MS - elapsed;
+
+    if (remaining > 0) {
+      setTimeout(hidePreloader, remaining);
+      return;
+    }
+
+    hidden = true;
+    preloader.classList.add('is-hidden');
+  };
+
+  if (document.readyState === 'complete') {
+    hidePreloader();
+  } else {
+    window.addEventListener('load', hidePreloader);
+  }
+
+  // Fallback in case a slow or blocked asset delays the window load event.
+  setTimeout(hidePreloader, 1000);
+}
+
 const revealItems = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(
   (entries) => {

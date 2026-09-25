@@ -8,20 +8,29 @@
       name="description"
       content="Kalinga Animal Welfare helps rescue, heal, and rehome animals with compassion, care, and second chances."
     />
+    <link rel="icon" type="image/png" href="src/images/BL-Kalinga-Icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Poppins:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <div id="preloader" class="preloader" role="status" aria-live="polite">
+      <img src="src/images/WT-Kalinga-Primary.png" alt="" class="preloader-logo" />
+      <div class="preloader-paws">
+        <img src="src/images/preloader-paw.png" alt="" class="paw" />
+        <img src="src/images/preloader-paw.png" alt="" class="paw" />
+        <img src="src/images/preloader-paw.png" alt="" class="paw" />
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="container nav-wrap">
         <a href="#top" class="brand" aria-label="Kalinga Animal Welfare home">
-          <span class="brand-mark">K</span>
-          <span class="brand-text">Kalinga Animal Welfare</span>
+          <img src="src/images/WT-Kalinga-Primary.png" alt="Kalinga Animal Welfare" />
         </a>
 
         <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -31,12 +40,12 @@
         </button>
 
         <nav class="site-nav" aria-label="Main navigation">
-          <a href="#story">Story</a>
-          <a href="#adopt">Adopt</a>
-          <a href="#impact">Impact</a>
-          <a href="#stories">Stories</a>
-          <a href="#help">Help</a>
-          <a href="#adopt" class="nav-cta">Adopt</a>
+          <a href="index.html">Home</a>
+          <a href="#adopt">Rescues</a>
+          <a href="#impact">Adopt</a>
+          <a href="#stories">About Us</a>
+          <a href="#help">Contact Us</a>
+          <a href="#adopt">Volunteer</a>
           <a href="#help" class="nav-cta alt">Donate</a>
         </nav>
       </div>
@@ -196,13 +205,13 @@
             <div class="comparison-slider">
               <div class="image-compare before-image">
                 <img
-                  src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=900&q=80"
+                  src="src/images/dog-before.jpg"
                   alt="Before recovery"
                 />
               </div>
               <div class="image-compare after-image" style="width: 58%;">
                 <img
-                  src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=900&q=80"
+                  src="src/images/dog-after.jpg"
                   alt="After recovery"
                 />
               </div>
@@ -443,11 +452,10 @@
       <div class="container footer-wrap">
         <div>
           <a href="#top" class="brand footer-brand">
-            <span class="brand-mark">K</span>
-            <span class="brand-text">Kalinga Animal Welfare © 2023</span>
+            <img src="src/images/WT-Kalinga-Primary.png" alt="Kalinga Animal Welfare" />
+            <span class="brand-text">Kalinga Animal Welfare © 2026. ALL RIGHTS RESERVED.</span>
           </a>
         </div>
-        <p>Compassion, care, and second chances for every life.</p>
       </div>
     </footer>
 
