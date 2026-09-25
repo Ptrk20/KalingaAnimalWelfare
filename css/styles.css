@@ -817,6 +817,10 @@ p {
   color: white;
 }
 
+.site-footer p {
+  color: white;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
