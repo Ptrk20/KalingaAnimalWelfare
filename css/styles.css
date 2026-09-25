@@ -220,7 +220,7 @@ p {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(12px);
-  background: #273617de;
+  background: #273617cc;
   border-bottom: 1px solid rgba(39, 54, 23, 0.08);
 }
 
@@ -1010,7 +1010,7 @@ p {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    background: rgba(255, 255, 255, 0.92);
+    background: #273617ea;
     border: 1px solid rgba(39, 54, 23, 0.08);
     border-radius: 1rem;
     padding: 1.2rem;
