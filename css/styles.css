@@ -318,7 +318,7 @@ p {
   display: block;
   height: 2px;
   width: 1.6rem;
-  background: var(--charcoal);
+  background: white;
   margin: 0.3rem 0;
   border-radius: 14px;
 }
@@ -1004,7 +1004,7 @@ p {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-20%);
     width: min(90vw, 400px);
     display: none;
     flex-direction: column;
