@@ -1,0 +1,143 @@
+flowchart TD
+
+ START["Kalinga Animal Welfare<br/>Rescue • Rehabilitate • Rehome"]
+ HOME["Landing Page / Homepage<br/>Interactive Storytelling"]
+
+ START --> HOME
+
+ HOME --> ADOPT["Adopt<br/>Available Animals"]
+ HOME --> STORIES["Stories<br/>Rescue • Rehabilitation • Success Stories"]
+ HOME --> ABOUT["About Us<br/>Mission • What We Do"]
+ HOME --> INVOLVED["Get Involved<br/>Adopt • Donate • Volunteer"]
+ HOME --> CONTACT["Contact<br/>Information • Map"]
+ HOME --> ADMIN["Admin<br/>Manage Content"]
+
+ %% ==========================
+ %% ADOPT
+ %% ==========================
+
+ ADOPT --> ADOPT_PAGE["Adopt Page<br/>Search & Filter"]
+ ADOPT_PAGE --> LISTINGS["Animal Listings<br/>Animal Cards"]
+ LISTINGS --> PROFILE["Animal Profile<br/>Photos • Story • Details"]
+ PROFILE --> PROCESS["Adoption Process<br/>Steps & Guidelines"]
+ PROCESS --> ADOPT_FORM["Adoption Application Form"]
+ ADOPT_FORM --> ADOPT_CONFIRM["Application Submitted<br/>Confirmation"]
+
+ %% ==========================
+ %% STORIES
+ %% ==========================
+
+ STORIES --> STORIES_PAGE["Stories Page"]
+ STORIES_PAGE --> RESCUE["Rescue Stories"]
+ STORIES_PAGE --> REHAB["Rehabilitation Stories"]
+ STORIES_PAGE --> SUCCESS["Successful Adoptions"]
+
+ RESCUE --> STORY_DETAIL["Story Detail Page<br/>Images • Journey • Impact"]
+ REHAB --> STORY_DETAIL
+ SUCCESS --> STORY_DETAIL
+
+ %% ==========================
+ %% ABOUT
+ %% ==========================
+
+ ABOUT --> ABOUT_PAGE["About Us Page"]
+ ABOUT_PAGE --> OUR_STORY["Our Story"]
+ ABOUT_PAGE --> MISSION["Mission • Vision • Values"]
+ ABOUT_PAGE --> WHAT_WE_DO["What We Do<br/>Rescue • Rehabilitate • Rehome"]
+ ABOUT_PAGE --> TEAM["Our Team"]
+ ABOUT_PAGE --> PARTNERS["Partners & Supporters"]
+
+ %% ==========================
+ %% GET INVOLVED
+ %% ==========================
+
+ INVOLVED --> GI_ADOPT["Adopt"]
+ INVOLVED --> GI_DONATE["Donate"]
+ INVOLVED --> GI_VOLUNTEER["Volunteer"]
+
+ %% Adopt redirects to Adopt Page
+ GI_ADOPT --> ADOPT_PAGE
+
+ %% ==========================
+ %% DONATE
+ %% ==========================
+
+ GI_DONATE --> DONATE_PAGE["Donate Page<br/>Choose Donation Type"]
+
+ DONATE_PAGE --> MONEY["Monetary Donation"]
+ DONATE_PAGE --> INKIND["In-Kind Donation"]
+
+ %% Monetary Donation
+ MONEY --> PAYMENT_INFO["QR Code / Bank Details"]
+ PAYMENT_INFO --> MONEY_FORM["Donation Confirmation Form<br/>Donor Information"]
+ MONEY_FORM --> RECEIPT["Attach / Upload Receipt"]
+ RECEIPT --> MONEY_SUBMIT["Submit Confirmation"]
+ MONEY_SUBMIT --> MONEY_SUCCESS["Donation Confirmation<br/>Thank You Message"]
+
+ %% In-Kind Donation
+ INKIND --> INKIND_FORM["In-Kind Donation Form"]
+ INKIND_FORM --> DONOR_INFO["Donor Information"]
+ DONOR_INFO --> DONATION_DETAILS["Describe / Select<br/>In-Kind Donations"]
+ DONATION_DETAILS --> INKIND_SUBMIT["Submit"]
+ INKIND_SUBMIT --> INKIND_SUCCESS["Donation Confirmation<br/>Thank You Message"]
+
+ %% ==========================
+ %% VOLUNTEER
+ %% ==========================
+
+ GI_VOLUNTEER --> VOLUNTEER_PAGE["Volunteer Page<br/>Volunteer Information"]
+ VOLUNTEER_PAGE --> VOLUNTEER_FORM["Volunteer Application Form"]
+ VOLUNTEER_FORM --> VOLUNTEER_SUBMIT["Submit Application"]
+ VOLUNTEER_SUBMIT --> VOLUNTEER_SUCCESS["Application Submitted<br/>Confirmation"]
+
+ %% ==========================
+ %% CONTACT
+ %% ==========================
+
+ CONTACT --> CONTACT_PAGE["Contact Page"]
+ CONTACT_PAGE --> CONTACT_INFO["Contact Information<br/>Email • Phone • Address"]
+ CONTACT_PAGE --> CONTACT_FORM["Contact Form<br/>Send a Message"]
+ CONTACT_PAGE --> MAP["Location / Map"]
+ CONTACT_PAGE --> FAQ["FAQ"]
+
+ %% ==========================
+ %% ADMIN
+ %% ==========================
+
+ ADMIN --> LOGIN["Admin Login"]
+ LOGIN --> DASHBOARD["Admin Dashboard"]
+
+ DASHBOARD --> MANAGE_ANIMALS["Manage Animals<br/>Add • Edit"]
+ DASHBOARD --> MANAGE_ADOPTION["Manage Adoption Applications"]
+ DASHBOARD --> MANAGE_VOLUNTEERS["Manage Volunteer Applications"]
+ DASHBOARD --> MANAGE_STORIES["Manage Stories<br/>Add • Edit"]
+ DASHBOARD --> MANAGE_DONATIONS["Manage Donations"]
+ DASHBOARD --> MANAGE_CONTENT["Manage Website Content"]
+
+ %% ==========================
+ %% STYLING
+ %% ==========================
+
+ classDef header fill:#244d3b,color:#fff,stroke:#18372a,stroke-width:2px;
+ classDef main fill:#e6efe9,color:#17261e,stroke:#52745f,stroke-width:1.5px;
+ classDef adopt fill:#eef5e8,color:#17261e,stroke:#89a77d;
+ classDef stories fill:#f5eee2,color:#17261e,stroke:#c9a979;
+ classDef about fill:#e8f1f5,color:#17261e,stroke:#88aebe;
+ classDef involved fill:#fbe8df,color:#17261e,stroke:#d89a7c;
+ classDef contact fill:#eceaf6,color:#17261e,stroke:#aaa3ce;
+ classDef admin fill:#eeeeee,color:#17261e,stroke:#999999;
+
+ class START header;
+ class HOME main;
+
+ class ADOPT,ADOPT_PAGE,LISTINGS,PROFILE,PROCESS,ADOPT_FORM,ADOPT_CONFIRM adopt;
+
+ class STORIES,STORIES_PAGE,RESCUE,REHAB,SUCCESS,STORY_DETAIL stories;
+
+ class ABOUT,ABOUT_PAGE,OUR_STORY,MISSION,WHAT_WE_DO,TEAM,PARTNERS about;
+
+ class INVOLVED,GI_ADOPT,GI_DONATE,GI_VOLUNTEER,DONATE_PAGE,MONEY,INKIND,PAYMENT_INFO,MONEY_FORM,RECEIPT,MONEY_SUBMIT,MONEY_SUCCESS,INKIND_FORM,DONOR_INFO,DONATION_DETAILS,INKIND_SUBMIT,INKIND_SUCCESS,VOLUNTEER_PAGE,VOLUNTEER_FORM,VOLUNTEER_SUBMIT,VOLUNTEER_SUCCESS involved;
+
+ class CONTACT,CONTACT_PAGE,CONTACT_INFO,CONTACT_FORM,MAP,FAQ contact;
+
+ class ADMIN,LOGIN,DASHBOARD,MANAGE_ANIMALS,MANAGE_ADOPTION,MANAGE_VOLUNTEERS,MANAGE_STORIES,MANAGE_DONATIONS,MANAGE_CONTENT admin;
